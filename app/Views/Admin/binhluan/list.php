@@ -26,11 +26,13 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Mã loại</th>
-                    <th>Tên loại</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th></th>
+                    <th>ID</th>
+                    <th>KHÁCH HÀNG</th>
+                    <th>SẢN PHẨM</th>
+                    <th>NỘI DUNG</th>
+                    <th>NGÀY ĐÁNH GIÁ</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -41,6 +43,8 @@
                     </td>
                     <td>Win 95+</td>
                     <td> 4</td>
+                    <td></td>
+                    <td></td>
                     <td>
                       <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
                     </td>
@@ -48,11 +52,13 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th></th>
+                    <th>ID</th>
+                    <th>KHÁCH HÀNG</th>
+                    <th>SẢN PHẨM</th>
+                    <th>NỘI DUNG</th>
+                    <th>NGÀY ĐÁNH GIÁ</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>THAO TÁC</th>
                   </tr>
                   </tfoot>
                 </table>

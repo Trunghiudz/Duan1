@@ -28,12 +28,16 @@
               <form role="form" id="quickForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">MÃ</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">MÃ KHÁCH HÀNG</label>
+                    <input type="text" name="makm" class="form-control" id="exampleInputEmail1" placeholder="Mã khách hàng">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Tên loại</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label>NỘI DUNG</label>
+                    <textarea class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">TRẠNG THÁI</label>
+                    <input type="text" name="trangthai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">

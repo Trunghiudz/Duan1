@@ -26,10 +26,10 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Mã loại</th>
-                    <th>Tên loại</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
+                    <th>ID</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>NGÀY NHẬP</th>
+                    <th>MÔ TẢ</th>
                     <th></th>
                   </tr>
                   </thead>

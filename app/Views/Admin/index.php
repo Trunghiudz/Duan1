@@ -53,7 +53,7 @@
             include "khuyenmai/list.php";
             break;
         case 'addkm':
-            include "khuyemmai/add.php";
+            include "khuyenmai/add.php";
             break;
         case 'listbt':
             include "bienthe/list.php";

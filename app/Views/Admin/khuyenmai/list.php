@@ -26,21 +26,23 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Mã loại</th>
-                    <th>Tên loại</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th></th>
+                    <th>ID</th>
+                    <th>Mã KHUYẾN MÃI</th>
+                    <th>Phần trăm khuyến mãi</th>
+                    <th>NGÀY ĐĂNG</th>
+                    <th>NGÀY KẾT THÚC</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                       <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
                     </td>
@@ -48,11 +50,13 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th></th>
+                    <th>ID</th>
+                    <th>Mã KHUYẾN MÃI</th>
+                    <th>Phần trăm khuyến mãi</th>
+                    <th>NGÀY ĐĂNG</th>
+                    <th>NGÀY KẾT THÚC</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>THAO TÁC</th>
                   </tr>
                   </tfoot>
                 </table>
