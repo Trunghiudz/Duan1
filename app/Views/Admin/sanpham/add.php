@@ -28,12 +28,25 @@
               <form role="form" id="quickForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">MÃ</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">TÊN SẢN PHẨM</label>
+                    <input type="text" name="tensp" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên sản phẩm">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Tên loại</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label>NGÀY NHẬP</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label>MÔ TẢ</label>
+                    <textarea class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
+                    <input type="text" name="trangthai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">

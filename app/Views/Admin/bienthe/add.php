@@ -28,12 +28,35 @@
               <form role="form" id="quickForm">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">MÃ</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">VAI TRÒ</label>
+                    <select class="form-control select2" style="width: 100%;">
+                      <option>Alaska</option>
+                      <option>California</option>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Tên loại</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputEmail1">MÀU SẮC</label>
+                    <input type="text" name="mausac" class="form-control" id="exampleInputEmail1" placeholder="Màu sắc">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">DUNG LƯỢNG</label>
+                    <input type="text" name="dungluong" class="form-control" id="exampleInputPassword1" placeholder="Dung lượng">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">GIÁ</label>
+                    <input type="text" name="gia" class="form-control" id="exampleInputPassword1" placeholder="Giá">
+                  </div>
+                  <div class="form-group">
+                    <label>MÔ TẢ</label>
+                    <textarea class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">SỐ LƯỢNG</label>
+                    <input type="text" name="soluong" class="form-control" id="exampleInputPassword1" placeholder="Số lượng">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">TRẠNG THÁI</label>
+                    <input type="text" name="trangthai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
