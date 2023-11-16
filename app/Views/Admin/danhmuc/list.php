@@ -30,7 +30,7 @@
                     <th>TÊN DANH MỤC</th>
                     <th>TRẠNG THÁI</th>
                     <th>MÔ TẢ</th>
-                    <th></th>
+                    <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -39,6 +39,7 @@
                     <td>Internet
                       Explorer 4.0
                     </td>
+                    <td></td>
                     <td></td>
                     <td>
                      
@@ -49,11 +50,11 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                  <th>ID</th>
+                    <th>ID</th>
                     <th>TÊN DANH MỤC</th>
                     <th>TRẠNG THÁI</th>
                     <th>MÔ TẢ</th>
-                    <th></th>
+                    <th>THAO TÁC</th>
                   </tr>
                   </tfoot>
                 </table>

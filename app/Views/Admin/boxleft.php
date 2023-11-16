@@ -103,7 +103,7 @@
               <p>
                 User
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -127,7 +127,7 @@
               <p>
                 Đơn hàng
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -151,7 +151,7 @@
               <p>
                 Biến thể
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -175,7 +175,7 @@
               <p>
                 Banner
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -199,7 +199,7 @@
               <p>
                 Khuyến mãi
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -223,7 +223,7 @@
               <p>
                 Liên hệ
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -247,7 +247,7 @@
               <p>
                 Tin tức
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -271,7 +271,7 @@
               <p>
                 Thống kê
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
