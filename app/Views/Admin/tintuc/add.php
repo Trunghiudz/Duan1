@@ -32,7 +32,7 @@
                     <input type="text" name="tieude" class="form-control" id="exampleInputEmail1" placeholder="Tiêu đề">
                   </div>
                   <div class="form-group">
-                    <label>Textarea</label>
+                    <label>NỘI DUNG</label>
                     <textarea class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
                   </div>
                   <div class="form-group">
