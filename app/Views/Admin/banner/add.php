@@ -29,11 +29,19 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">TÊN BANNER</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" name="banner" class="form-control" id="exampleInputEmail1" placeholder="Tên banner">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Tên loại</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">ẢNH</label><br>
+                    <input type="file" name="img"  id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">LINK</label>
+                    <input type="text" name="link" class="form-control" id="exampleInputEmail1" placeholder="Link">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
+                    <input type="text" name="trangthai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
