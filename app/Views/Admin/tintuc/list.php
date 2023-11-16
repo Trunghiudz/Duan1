@@ -35,22 +35,29 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td></td>
+                  <?php
+                    $stt=0;
+                    foreach($listtintuc as $tintuc){
+                    $stt++;
+                    extract($tintuc);
+                  
+                    echo '<tr>
+                    <td>'.$stt.'</td>
+                    <td>'.$tieu_de.'</td>
+                    <td>'.$noi_dung.'</td>
+                    <td>'.$trangThai.'</td>
+                    <td>'.$ngayDang.'</td>
                     <td>
                       <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
                     </td>
-                  </tr>
+                  </tr>';
+                  }
+                  ?>
+                  
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>MÃ</th>
+                      <th>MÃ</th>
                       <th>TIÊU ĐỀ</th>
                       <th>NỘI DUNG</th>
                       <th>NGÀY ĐĂNG</th>

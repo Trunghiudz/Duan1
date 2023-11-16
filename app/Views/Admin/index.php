@@ -2,12 +2,16 @@
   include("header.php");
   include("boxleft.php");
   include("home.php");
+  include("../../Models/Admin/pdo.php");
+  include("../../Models/Admin/tintuc.php");
+  include("../../Models/Admin/danhmuc.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
     $act=$_GET['act'];
     switch ($act) {
         case 'listdm':
+            $listdm=load_all_dm();
             include "danhmuc/list.php";
             break;
         case 'adddm':
@@ -38,6 +42,7 @@
             include "user/add.php";
             break;
         case 'listtt':
+            $listtintuc=load_all_tintuc();
             include "tintuc/list.php";
             break;
         case 'addtt':
