@@ -31,7 +31,7 @@
               <p>
                 Danh mục
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+               
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -55,7 +55,7 @@
               <p>
                 Sản phẩm
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+               
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -79,7 +79,7 @@
               <p>
                 Bình luận
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                
               </p>
             </a>
             <ul class="nav nav-treeview">
