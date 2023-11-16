@@ -27,9 +27,9 @@
                   <thead>
                   <tr>
                     <th>Mã loại</th>
-                    <th>Tên loại</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
+                    <th>LOẠI</th>
+                    <th>TÊN ĐƠN HÀNG</th>
+                    <th>Loại hàng</th>
                     <th></th>
                   </tr>
                   </thead>

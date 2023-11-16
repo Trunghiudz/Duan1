@@ -26,8 +26,10 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Mã</th>
-                    <th>Tên danh mục</th>
+                    <th>ID</th>
+                    <th>TÊN DANH MỤC</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>MÔ TẢ</th>
                     <th></th>
                   </tr>
                   </thead>
@@ -37,7 +39,9 @@
                     <td>Internet
                       Explorer 4.0
                     </td>
+                    <td></td>
                     <td>
+                     
                       <a href="index.php?act=suadm"><button type="button" class="btn btn-block btn-default">Sửa</button></a>
                       <button type="button" class="btn btn-block btn-default">Xóa</button>
                     </td>
@@ -45,8 +49,10 @@
                   </tbody>
                   <tfoot>
                   <tr>
-                    <th>Mã</th>
-                    <th>Tên danh mục</th>
+                  <th>ID</th>
+                    <th>TÊN DANH MỤC</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>MÔ TẢ</th>
                     <th></th>
                   </tr>
                   </tfoot>
