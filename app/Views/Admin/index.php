@@ -49,7 +49,13 @@
             include "tintuc/add.php";
             break;
         case 'xoatt':
-            include "tintuc/add.php";
+            if (isset($_GET['id_tintuc'])&&($_GET['id_tintuc'])>0) {
+                // $sql="delete from danhmuc where id=".$_GET['id'];
+                // pdo_execute($sql);
+                delete_tintuc($_GET['id_tintuc']);
+            }
+            $listtintuc=load_all_tintuc();
+            include "tintuc/list.php";
             break;
         case 'listlh':
             include "lienhe/list.php";

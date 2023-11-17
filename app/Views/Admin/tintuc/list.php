@@ -40,8 +40,8 @@
                     foreach($listtintuc as $tintuc){
                     $stt++;
                     extract($tintuc);
-                    $suatt = "index.php?act=suasp&id_tintuc=".$id_tintuc;
-                    $xoatt = "index.php?act=xoasp&id_tintuc=".$id_tintuc;
+                    $suatt = "index.php?act=suatt&id_tintuc=".$id_tintuc;
+                    $xoatt = "index.php?act=xoatt&id_tintuc=".$id_tintuc;
                     echo '<tr>
                     <td>'.$stt.'</td>
                     <td>'.$tieu_de.'</td>

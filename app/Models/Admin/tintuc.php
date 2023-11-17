@@ -4,4 +4,8 @@
         $listtintuc=pdo_query($sql);
         return  $listtintuc;
     }
+    function delete_tintuc($id_tintuc){
+        $sql="delete from tin_tuc where id_tintuc=".$id_tintuc;
+        pdo_execute($sql);
+    }
 ?>
