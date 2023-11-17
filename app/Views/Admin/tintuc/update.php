@@ -1,3 +1,8 @@
+<?php
+  if(is_array($tintuc)){
+    extract($tintuc);
+  }
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -25,20 +30,24 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form  role="form" id="quickForm" method="post">
+              <form  role="form" id="quickForm" action="index.php?act=updatett" method="post">
                 <div class="card-body">
                   <div class="form-group">
+                    <label for="exampleInputEmail1">ID</label>
+                    <input type="text" name="id_tintuc" class="form-control" id="exampleInputEmail1" value="<?=$id_tintuc?>">
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputEmail1">TIÊU ĐỀ</label>
-                    <input type="text" name="tieude" class="form-control" id="exampleInputEmail1" placeholder="Tiêu đề">
+                    <input type="text" name="tieude" class="form-control" id="exampleInputEmail1" placeholder="Tiêu đề" value="<?=$tieu_de?>">
                   </div>
                   <div class="form-group">
                     <label>NỘI DUNG</label>
-                    <textarea name="noidung" class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
+                    <textarea name="noidung" class="form-control" rows="3" placeholder="Nội dung ..." value="<?=$noi_dung?>"></textarea>
                   </div>
                   <div class="form-group">
                     <label>NGÀY ĐĂNG</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" name="ngaydang" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                        <input type="text" name="ngaydang" class="form-control datetimepicker-input" data-target="#reservationdate" value="<?=$ngayDang?>" />
                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker" >
                             <div class="input-group-text"><i class="fa fa-calendar" ></i></div>
                         </div>
@@ -46,7 +55,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái" value=<?=$trangThai?>>
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
@@ -57,7 +66,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="capnhat">Submit</button>
                 </div>
                 <?php
                   if(isset($thongBao) && $thongBao != ""){

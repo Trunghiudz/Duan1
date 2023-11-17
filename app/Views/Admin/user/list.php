@@ -35,11 +35,37 @@
                     <th>ĐIỆN THOẠI</th>
                     <th>VAI TRÒ</th>
                     <th>TRẠNG THÁI</th>
+                    <th>NGÀY SINH</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
+                  <?php
+                    $stt=0;
+                    foreach($listuser as $user){
+                    $stt++;
+                    extract($user);
+                    $suauser = "index.php?act=suauser&id_user=".$id_user;
+                    $xoauser = "index.php?act=xoauser&id_user=".$id_user;
+                    echo '<tr>
+                    <td>'.$stt.'</td>
+                    <td>'.$hoTen.'</td>
+                    <td>'.$taiKhoan.'</td>
+                    <td>'.$matKhau.'</td>
+                    <td>'.$email.'</td>
+                    <td>'.$diaChi.'</td>
+                    <td>'.$soDienThoai.'</td>
+                    <td>'.$id_role.'</td>
+                    <td>'.$trangThai.'</td>
+                    <td>'.$ngay_sinh.'</td>
+                    <td>
+                      <a href="'.$suauser.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoauser.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
+                    </td>
+                  </tr>';
+                  }
+                  ?>
+                  <!-- <tr>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -53,7 +79,7 @@
                       <button type="button" class="btn btn-block btn-default">Sửa</button><button type="button" class="btn btn-block btn-default">Xóa</button>
                     </td>
                   </tr>
-                  </tbody>
+                  </tbody> -->
                   
                 </table>
               </div>

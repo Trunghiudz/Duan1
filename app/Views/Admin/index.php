@@ -5,6 +5,7 @@
   include("../../Models/Admin/pdo.php");
   include("../../Models/Admin/tintuc.php");
   include("../../Models/Admin/danhmuc.php");
+  include("../../Models/Admin/user.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -30,7 +31,7 @@
             include "danhmuc/update.php";
             break;
         case "updatedm":
-             if(isset($_POST['capnhat'])){
+            if(isset($_POST['capnhat'])){
                     $id_dm = $_POST['id_dm'];
                     $ten_dm = $_POST['ten_dm'];
                     
@@ -68,12 +69,48 @@
             include "donhang/add.php";
             break;
         case 'listuser':
+            $listuser=load_all_user();
+            include "user/list.php";
+            break;
+        case 'updateuser':
+            include "user/list.php";
+            break;
+        case 'suauser':
+            include "user/update.php";
+            break;
+        case 'xoauser':
+            if (isset($_GET['id_user'])&&($_GET['id_user'])>0) {
+                delete_user($_GET['id_user']);
+            }
+            $listuser=load_all_user();
+            
             include "user/list.php";
             break;
         case 'adduser':
             include "user/add.php";
             break;
         case 'listtt':
+            $listtintuc=load_all_tintuc();
+            include "tintuc/list.php";
+            break;
+        case "suatt":
+            if(isset($_GET['id_tintuc']) && $_GET['id_tintuc'] > 0){
+                $id_tintuc = $_GET['id_tintuc'];
+                $tintuc = loadone_tintuc($id_tintuc);
+            }
+            include "tintuc/update.php";
+            break;
+        case "updatett":
+            if(isset($_POST['capnhat'])){
+                $id_tintuc = $_POST['id_tintuc'];
+                $tieude = $_POST['tieude'];
+                $noidung=$_POST['noidung'];
+                $trangthai=$_POST['trangThai'];
+                $ngayDang=$_POST['ngaydang'];        
+                update_tintuc($id_tintuc,$tieude,$noidung,$ngayDang,$trangthai);
+                $thongBao = " Cập nhập thành công";
+            }
+    
             $listtintuc=load_all_tintuc();
             include "tintuc/list.php";
             break;
