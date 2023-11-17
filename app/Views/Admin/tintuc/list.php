@@ -40,7 +40,8 @@
                     foreach($listtintuc as $tintuc){
                     $stt++;
                     extract($tintuc);
-                  
+                    $suatt = "index.php?act=suasp&id_tintuc=".$id_tintuc;
+                    $xoatt = "index.php?act=xoasp&id_tintuc=".$id_tintuc;
                     echo '<tr>
                     <td>'.$stt.'</td>
                     <td>'.$tieu_de.'</td>
@@ -48,7 +49,8 @@
                     <td>'.$trangThai.'</td>
                     <td>'.$ngayDang.'</td>
                     <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
+                      <a href="'.$suatt.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoatt.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
                     </td>
                   </tr>';
                   }
