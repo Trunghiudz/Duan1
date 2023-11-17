@@ -26,11 +26,11 @@
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>MÃ</th>
+                    <th>ID</th>
                     <th>TIÊU ĐỀ</th>
                     <th>NỘI DUNG</th>
-                    <th>NGÀY ĐĂNG</th>
                     <th>TRẠNG THÁI</th>
+                    <th>NGÀY ĐĂNG</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
@@ -57,16 +57,7 @@
                   ?>
                   
                   </tbody>
-                  <tfoot>
-                  <tr>
-                      <th>MÃ</th>
-                      <th>TIÊU ĐỀ</th>
-                      <th>NỘI DUNG</th>
-                      <th>NGÀY ĐĂNG</th>
-                      <th>TRẠNG THÁI</th>
-                      <th>THAO TÁC</th>
-                    </tr>
-                  </tfoot>
+
                 </table>
               </div>
               <!-- /.card-body -->

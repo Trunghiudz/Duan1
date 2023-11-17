@@ -46,15 +46,6 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>MÃ KHÁCH HÀNG</th>
-                    <th>NỘI DUNG</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

@@ -50,17 +50,6 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>KHÁCH HÀNG</th>
-                    <th>SẢN PHẨM</th>
-                    <th>NỘI DUNG</th>
-                    <th>NGÀY ĐÁNH GIÁ</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

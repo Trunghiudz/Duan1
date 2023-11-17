@@ -78,12 +78,12 @@
             include "tintuc/list.php";
             break;
         case 'addtt':
-            if (isset($_POST['gui'])&&($_POST['gui'])) {
+            if (isset($_POST['gui'])) {
                 $tieude=$_POST['tieude'];
                 $noidung=$_POST['noidung'];
                 $trangthai=$_POST['trangThai'];
                 $ngayDang=$_POST['ngaydang'];
-                insert_tintuc($tieude,$noidung,$trangthai,$ngayDang);
+                insert_tintuc($tieude,$noidung,$ngayDang,$trangthai);
                 $thongBao = " Thêm thành công";
             }
             include "tintuc/add.php";

@@ -54,19 +54,6 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>TÊN SẢN PHẨM</th>
-                    <th>MÀU SẮC</th>
-                    <th>DUNG LƯỢNG</th>
-                    <th>GIÁ</th>
-                    <th>SỐ LƯỢNG</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>MÔ TẢ</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

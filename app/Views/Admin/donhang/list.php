@@ -52,17 +52,6 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <th>ID</th>
-                    <th>TEN</th>
-                    <th>NGÀY ĐẶT HÀNG</th>
-                    <th>TỔNG ĐƠN HÀNG</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>KHUYẾN MÃI</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

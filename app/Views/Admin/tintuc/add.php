@@ -25,7 +25,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form  role="form" id="quickForm" method="POST">
+              <form  role="form" id="quickForm" method="post">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">TIÊU ĐỀ</label>
@@ -37,10 +37,10 @@
                   </div>
                   <div class="form-group">
                     <label>NGÀY ĐĂNG</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest" name="ngaydang">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                        <input type="text" name="ngaydang" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker" >
+                            <div class="input-group-text"><i class="fa fa-calendar" ></i></div>
                         </div>
                     </div>
                   </div>
@@ -60,11 +60,9 @@
                   <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
                 <?php
-                  
                   if(isset($thongBao) && $thongBao != ""){
                       echo $thongBao;
                   }
-              
                 ?>
               </form>
             </div>

@@ -48,17 +48,6 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>Mã KHUYẾN MÃI</th>
-                    <th>Phần trăm khuyến mãi</th>
-                    <th>NGÀY ĐĂNG</th>
-                    <th>NGÀY KẾT THÚC</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

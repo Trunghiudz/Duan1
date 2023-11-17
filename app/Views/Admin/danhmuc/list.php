@@ -70,15 +70,6 @@
                     </td>
                   </tr> -->
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>TÊN DANH MỤC</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>MÔ TẢ</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

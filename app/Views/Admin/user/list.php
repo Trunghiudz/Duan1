@@ -54,20 +54,7 @@
                     </td>
                   </tr>
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>TÊN USER</th>
-                    <th>TÊN ĐĂNG NHẬP</th>
-                    <th>MẬT KHẨU</th>
-                    <th>EMAIL</th>
-                    <th>ĐỊA CHỈ</th>
-                    <th>ĐIỆN THOẠI</th>
-                    <th>VAI TRÒ</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>THAO TÁC</th>
-                  </tr>
-                  </tfoot>
+                  
                 </table>
               </div>
               <!-- /.card-body -->
