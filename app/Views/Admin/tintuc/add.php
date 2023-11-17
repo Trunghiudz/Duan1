@@ -36,6 +36,15 @@
                     <textarea name="noidung" class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
                   </div>
                   <div class="form-group">
+                    <label>NGÀY ĐĂNG</label>
+                    <div class="input-group date" id="reservationdate" data-target-input="nearest" name="ngaydang">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
                     <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
                   </div>
@@ -48,8 +57,15 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="themmoi">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
+                <?php
+                  
+                  if(isset($thongBao) && $thongBao != ""){
+                      echo $thongBao;
+                  }
+              
+                ?>
               </form>
             </div>
             <!-- /.card -->

@@ -8,9 +8,8 @@
         $sql="delete from tin_tuc where id_tintuc=".$id_tintuc;
         pdo_execute($sql);
     }
-    function insert_tintuc($tieude,$noidung,$trangthai){
-        $sql="INSERT INTO tin_tuc(tieu_de, noi_dung, ngayDang, trangThai) values ('$tieude', '$noidung', '$trangthai');";
-        // k trả về bản ghi nào cả
+    function insert_tintuc($tieude,$noidung,$trangthai,$ngayDang){
+        $sql="INSERT INTO tin_tuc(tieu_de, noi_dung, trangThai, ngayDang) values ('$tieude','$noidung', '$trangthai', '$ngayDang');";
         pdo_execute($sql);
     }
 ?>
