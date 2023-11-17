@@ -48,6 +48,9 @@
         case 'addtt':
             include "tintuc/add.php";
             break;
+        case 'xoatt':
+            include "tintuc/add.php";
+            break;
         case 'listlh':
             include "lienhe/list.php";
             break;
