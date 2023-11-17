@@ -15,7 +15,39 @@
             include "danhmuc/list.php";
             break;
         case 'adddm':
+            if(isset($_POST['gui'])){
+                $ten_dm = $_POST['ten_dm'];
+                insert_danhmuc($ten_dm);
+                $thongBao = " Thêm thành công";
+            }
             include "danhmuc/add.php";
+            break;
+        case "suadm":
+            if(isset($_GET['id_dm']) && $_GET['id_dm'] > 0){
+                    $id_dm = $_GET['id_dm'];
+                    $dm = loadone_danhmuc($id_dm);
+            }
+            include "danhmuc/update.php";
+            break;
+        case "updatedm":
+             if(isset($_POST['capnhat'])){
+                    $id_dm = $_POST['id_dm'];
+                    $ten_dm = $_POST['ten_dm'];
+                    
+                    update_danhmuc($id_dm,$ten_dm);
+            }
+
+            $listdm = load_all_dm();
+            include "danhmuc/list.php";
+            break;
+        case "xoadm":
+            if(isset($_GET['id_dm']) && $_GET['id_dm'] != ""){
+                    $id_dm = $_GET['id_dm'];
+                    delete_danhmuc($id_dm);
+            }
+
+            $listdm = load_all_dm();
+            include "danhmuc/list.php";
             break;
         case 'listsp':
             include "sanpham/list.php";

@@ -39,17 +39,22 @@
                     foreach($listdm as $dm){
                       $stt++;
                     extract($dm);
-                  
-                    echo '<tr>
-                    <td>'.$stt.'</td>
-                    <td>'.$ten_dm.'</td>
-                    <td>'.$moTa.'</td>
-                    <td>'.$trangThai.'</td>
+                  ?>
+                    <tr>
+                    <td><?= $id_dm  ?></td>
+                    <td><?= $ten_dm ?></td>
+                    <td><?= $moTa ?></td>
+                    <td><?= $trangThai ?></td>
                     <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
+                      <a href="index.php?act=suadm&id_dm=<?= $id_dm  ?>">
+                      <button type="button" class="btn btn-block btn-default">Sửa</button> 
+                      </a>
+                      <a href="index.php?act=xoadm&id_dm=<?= $id_dm  ?>">
+                      <button type="button" class="btn btn-block btn-default">Xóa</button>
+                      </a>
                     </td>
-                  </tr>';
-                  }
+                  </tr>
+                  <?php }
                   ?>
                   <!-- <tr>
                     <td>Trident</td>

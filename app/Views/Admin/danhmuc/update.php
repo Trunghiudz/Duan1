@@ -1,3 +1,10 @@
+<?php
+if(is_array($dm)){
+    extract($dm);
+}
+
+?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -25,26 +32,20 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm">
+              <form role="form" id="quickForm" action="index.php?act=updatedm" method="post">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">MÃ</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" name="id_dm" class="form-control" id="exampleInputEmail1" placeholder="Mã danh mục" value="<?= $id_dm  ?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Tên loại</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group mb-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
-                    </div>
+                    <input type="text" name="ten_dm" class="form-control" id="exampleInputPassword1" placeholder="Tên loại" value="<?= $ten_dm ?>">
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="capnhat">CẬP NHẬT</button>
                 </div>
               </form>
             </div>
