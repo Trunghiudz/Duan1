@@ -25,7 +25,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm">
+              <form  role="form" id="quickForm" method="POST">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">TIÊU ĐỀ</label>
@@ -33,11 +33,11 @@
                   </div>
                   <div class="form-group">
                     <label>NỘI DUNG</label>
-                    <textarea class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
+                    <textarea name="noidung" class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="tieude" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
@@ -48,7 +48,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="themmoi">Submit</button>
                 </div>
               </form>
             </div>

@@ -46,12 +46,16 @@
             include "tintuc/list.php";
             break;
         case 'addtt':
+            if (isset($_POST['themmoi'])&&($_POST['themmoi'])) {
+                $tieude=$_POST['tieude'];
+                $noidung=$_POST['noidung'];
+                $trangthai=$_POST['trangThai'];
+                insert_tintuc($tieude,$noidung,$trangthai);
+            }
             include "tintuc/add.php";
             break;
         case 'xoatt':
             if (isset($_GET['id_tintuc'])&&($_GET['id_tintuc'])>0) {
-                // $sql="delete from danhmuc where id=".$_GET['id'];
-                // pdo_execute($sql);
                 delete_tintuc($_GET['id_tintuc']);
             }
             $listtintuc=load_all_tintuc();
