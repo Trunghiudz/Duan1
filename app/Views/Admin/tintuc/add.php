@@ -37,11 +37,8 @@
                   </div>
                   <div class="form-group">
                     <label>NGÀY ĐĂNG</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" name="ngaydang" class="form-control datetimepicker-input" data-target="#reservationdate" />
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker" >
-                            <div class="input-group-text"><i class="fa fa-calendar" ></i></div>
-                        </div>
+                    <div class="input-group date" id="reservationdate">
+                        <input type="date" name="ngaydang" class="form-control datetimepicker-input"/>
                     </div>
                   </div>
                   <div class="form-group">

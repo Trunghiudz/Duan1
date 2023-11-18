@@ -1,6 +1,6 @@
 <?php
-  if(is_array($tintuc)){
-    extract($tintuc);
+  if(is_array($pro_one)){
+    extract($pro_one);
   }
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Tin tức</h1>
+            <h1 class="m-0 text-dark">Khuyến mãi</h1>
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
@@ -26,43 +26,48 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Sửa tin tức</small></h3>
+                <h3 class="card-title">Thêm khuyến mãi</small></h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form  role="form" id="quickForm" action="index.php?act=updatett" method="post">
+              <form role="form" id="quickForm" method="post" action="index.php?act=updatekm">
                 <div class="card-body">
                   <div class="form-group">
-                    <input type="hidden" name="id_tintuc" value="<?php if (isset($id_tintuc)&&($id_tintuc>0)) echo $id_tintuc;?>">
+                    <input type="hidden" name="id_km" value="<?php if (isset($id_km)&&($id_km>0)) echo $id_km;?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">TIÊU ĐỀ</label>
-                    <input type="text" name="tieude" class="form-control" id="exampleInputEmail1" placeholder="Tiêu đề" value="<?=$tieu_de?>">
+                    <label for="exampleInputEmail1">MÃ KHUYẾN MÃI</label>
+                    <input type="text" name="ma_km" class="form-control" id="exampleInputEmail1" value="<?= $ma_km ?>" placeholder="Mã khuyến mãi">
                   </div>
                   <div class="form-group">
-                    <label>NỘI DUNG</label>
-                    <textarea name="noidung" class="form-control" rows="3" placeholder="Nội dung ..." value="<?=$noi_dung?>"></textarea>
+                    <label for="exampleInputPassword1">PHẦN TRĂM KHUYẾN MÃI</label>
+                    <input type="text" name="phantram_km" class="form-control" value="<?= $phantram_km ?>" id="exampleInputPassword1" placeholder="Phần trăm khuyến mãi">
                   </div>
                   <div class="form-group">
-                    <label>NGÀY ĐĂNG</label>
+                    <label>NGÀY BẮT ĐẦU</label>
                     <div class="input-group date" id="reservationdate">
-                        <input type="date" name="ngaydang" class="form-control datetimepicker-input" value="<?=$ngayDang?>" />
+                        <input type="date" class="form-control datetimepicker-input" value="<?= $ngay_bd ?>" name="ngay_bd">
+                        
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái" value=<?=$trangThai?>>
-                  </div>
-                  <div class="form-group mb-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" name="terms" class="custom-control-input" id="exampleCheck1">
-                      <label class="custom-control-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a>.</label>
+                    <label>NGÀY KẾT THÚC</label>
+                    <div class="input-group date" id="reservationdate">
+                        <input type="date" class="form-control datetimepicker-input" value="<?= $ngay_kt ?>" name="ngay_kt">
+  
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">TRẠNG THÁI</label>
+                    <input type="text" name="trangThai" class="form-control" value="<?= $trangThai ?>" id="exampleInputPassword1" placeholder="Trạng thái">
+                  </div>
+                  
+                    
                 </div>
+                
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="capnhat">Submit</button>
+                    <button type="submit" class="btn btn-primary" name="update">Submit</button>
                 </div>
                 <?php
                   if(isset($thongBao) && $thongBao != ""){
@@ -86,4 +91,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    

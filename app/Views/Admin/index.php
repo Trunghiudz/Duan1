@@ -121,7 +121,7 @@
                 $noidung=$_POST['noidung'];
                 $trangthai=$_POST['trangThai'];
                 $ngayDang=$_POST['ngaydang'];        
-                update_tintuc($id_tintuc,$tieude,$noidung,$ngayDang,$trangthai);
+                update_tintuc($id_tintuc,$tieude,$noidung,$trangthai,$ngayDang);
                 $thongBao = " Cập nhập thành công";
             }
     
@@ -157,7 +157,12 @@
             include "khuyenmai/list.php";
             break;
         case 'suakm':
-            include "khuyenmai/add.php";
+            if (isset($_GET['id_km'])) {
+                $id_km = $_GET['id_km'];
+                $pro_one =queryonekm($id_km);
+            }
+            include 'khuyenmai/update.php';
+            break;
             break;  
         case 'xoakm':
             if (isset($_GET['id_km'])&&($_GET['id_km'])>0) {
@@ -167,8 +172,19 @@
             include "khuyenmai/list.php";
             break;  
         case 'updatekm':
-            include "khuyenmai/add.php";
-            break;
+            if (isset($_POST['update'])) {
+                $id_km=$_POST['id_km'];
+                $ma_km = $_POST['ma_km'];
+                $phantram_km = $_POST['phantram_km'];
+                $trangThai	 = $_POST['trangThai'];
+                $ngay_bd = $_POST['ngay_bd'];
+                $ngay_kt = $_POST['ngay_kt'];
+                updatekm($id_km,$ma_km,$phantram_km,$trangThai,$ngay_bd,$ngay_kt);
+                $thongBao = " Cập nhập thành công";
+            }
+
+            $listkhuyenmai = load_all_khuyenmai();
+            include 'khuyenmai/list.php';
         case 'addkm':
             if (isset($_POST['gui'])) {
                 $ma_km=$_POST['ma_km'];

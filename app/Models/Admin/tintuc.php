@@ -13,11 +13,11 @@
         pdo_execute($sql);
     }
     function update_tintuc($id_tintuc,$tieude,$noidung,$trangthai,$ngayDang){
-        $sql = "update tin_tuc set tieu_de = '$tieude', noi_dung='$noidung', trangThai='$trangthai', ngayDang='$ngayDang' where id_tintuc = '$id_tintuc'";
+        $sql = "update tin_tuc set tieu_de = '$tieude', noi_dung='$noidung', trangThai='$trangthai', ngayDang='$ngayDang' where id_tintuc =".$id_tintuc;
         pdo_execute($sql);
     }
     function loadone_tintuc($id_tintuc){
-        $sql = "select * from tin_tuc where id_tintuc = '$id_tintuc'";
+        $sql = "select * from tin_tuc where id_tintuc =".$id_tintuc;
         $result = pdo_query_one($sql);
         return $result;
     }
