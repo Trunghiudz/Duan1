@@ -60,8 +60,12 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">VAI TRÒ</label>
                     <select class="form-control select2" style="width: 100%;" name="id_role">
-                      <option value="0">1</option>
-                      <option value="1">2</option>
+                      <?php 
+                        foreach ($list as $danhmuc){
+                        extract($danhmuc);
+                        echo '<option value="'.$id.'">'.$name.'</option>';
+                      }
+                       ?>
                     </select>
                   </div>
                   <div class="form-group">

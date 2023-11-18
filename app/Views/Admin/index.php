@@ -7,6 +7,7 @@
   include("../../Models/Admin/danhmuc.php");
   include("../../Models/Admin/user.php");
   include("../../Models/Admin/khuyenmai.php");
+  include("../../Models/Admin/lienhe.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -148,6 +149,7 @@
             include "tintuc/list.php";
             break;
         case 'listlh':
+            $listlienhe=load_all_tintuc();
             include "lienhe/list.php";
             break;
         case 'addlh':
