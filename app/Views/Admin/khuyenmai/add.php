@@ -37,20 +37,14 @@
                   </div>
                   <div class="form-group">
                     <label>NGÀY BẮT ĐẦU</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate" name="ngay_bd"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
+                    <div class="input-group date" id="reservationdate" >
+                        <input type="date" class="form-control datetimepicker-input" name="ngay_bd"/>
                     </div>
                   </div>
                   <div class="form-group">
                     <label>NGÀY KẾT THÚC</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate" name="ngay_kt"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
+                    <div class="input-group date" id="reservationdate">
+                        <input type="date" class="form-control datetimepicker-input" name="ngay_kt"/>
                     </div>
                   </div>
                   <div class="form-group">

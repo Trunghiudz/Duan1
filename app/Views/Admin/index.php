@@ -95,9 +95,10 @@
                 $email=$_POST['email'];
                 $taiKhoan=$_POST['taiKhoan'];
                 $matKhau=$_POST['matKhau'];
+                $ngay_sinh=$_POST['ngay_sinh'];
                 $trangThai=$_POST['trangThai'];
                 $id_role=$_POST['id_role'];
-                insert_user($hoTen, $soDienThoai, $email, $diaChi, $taiKhoan, $matKhau, $trangThai, $id_role);
+                insert_user($hoTen, $soDienThoai, $email, $diaChi, $taiKhoan, $matKhau,$ngay_sinh, $trangThai, $id_role);
                 $thongBao = " Thêm thành công";
             }
             

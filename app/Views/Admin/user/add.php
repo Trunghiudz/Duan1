@@ -52,15 +52,21 @@
                     <input type="text" name="soDienThoai" class="form-control" id="exampleInputEmail1" placeholder="Nhập số điện thoại">
                   </div>
                   <div class="form-group">
+                    <label>NGÀY SINH</label>
+                    <div class="input-group date" id="reservationdate" >
+                        <input type="date" class="form-control datetimepicker-input" name="ngay_sinh"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputEmail1">VAI TRÒ</label>
                     <select class="form-control select2" style="width: 100%;" name="id_role">
-                      <option value="0">Khách hàng</option>
-                      <option value="1">Quản trị</option>
+                      <option value="0">1</option>
+                      <option value="1">2</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Nhập trạng thái">
+                    <input type="text" name="trangThai" class="form-control" placeholder="Nhập trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
