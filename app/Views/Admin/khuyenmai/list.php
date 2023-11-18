@@ -29,24 +29,35 @@
                     <th>ID</th>
                     <th>Mã KHUYẾN MÃI</th>
                     <th>Phần trăm khuyến mãi</th>
+                    <th>TRẠNG THÁI</th>
                     <th>NGÀY ĐĂNG</th>
                     <th>NGÀY KẾT THÚC</th>
-                    <th>TRẠNG THÁI</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
-                    </td>
-                  </tr>
+                  <?php
+                    $stt=0;
+                    foreach($listkhuyenmai as $khuyenmai){
+                      $stt++;
+                      extract($khuyenmai);
+                      $suakm = "index.php?act=suakm&id_km=".$id_km;
+                      $xoakm = "index.php?act=xoakm&id_km=".$id_km;
+                      echo '<tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$ma_km.'</td>
+                      <td>'.$phantram_km.'</td>
+                      <td>'.$trangThai.'</td>
+                      <td>'.$ngay_bd.'</td>
+                      <td>'.$ngay_kt.'</td>
+                      <td>
+                      <a href="'.$suakm.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoakm.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
+                      </td>
+                    </tr>';
+                    }
+                  ?>
+                  
                   </tbody>
                 </table>
               </div>

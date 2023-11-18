@@ -6,6 +6,7 @@
   include("../../Models/Admin/tintuc.php");
   include("../../Models/Admin/danhmuc.php");
   include("../../Models/Admin/user.php");
+  include("../../Models/Admin/khuyenmai.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -152,9 +153,32 @@
             include "lienhe/add.php";
             break;
         case 'listkm':
+            $listkhuyenmai=load_all_khuyenmai();
             include "khuyenmai/list.php";
             break;
+        case 'suakm':
+            include "khuyenmai/add.php";
+            break;  
+        case 'xoakm':
+            if (isset($_GET['id_km'])&&($_GET['id_km'])>0) {
+                delete_khuyenmai($_GET['id_km']);
+            }
+            $listkhuyenmai=load_all_khuyenmai();
+            include "khuyenmai/list.php";
+            break;  
+        case 'updatekm':
+            include "khuyenmai/add.php";
+            break;
         case 'addkm':
+            if (isset($_POST['gui'])) {
+                $ma_km=$_POST['ma_km'];
+                $phantram_km=$_POST['phantram_km'];
+                $trangThai=$_POST['trangThai'];
+                $ngay_bd=$_POST['ngay_bd'];
+                $ngay_kt=$_POST['ngay_kt'];
+                insert_khuyenmai($ma_km,$phantram_km,$trangThai,$ngay_bd,$ngay_kt);
+                $thongBao = " Thêm thành công";
+            }
             include "khuyenmai/add.php";
             break;
         case 'listbt':

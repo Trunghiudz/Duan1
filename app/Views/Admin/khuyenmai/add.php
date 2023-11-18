@@ -25,20 +25,20 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm">
+              <form role="form" id="quickForm" method="post">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">MÃ KHUYẾN MÃI</label>
-                    <input type="text" name="makm" class="form-control" id="exampleInputEmail1" placeholder="Mã khuyến mãi">
+                    <input type="text" name="ma_km" class="form-control" id="exampleInputEmail1" placeholder="Mã khuyến mãi">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">PHẦN TRĂM KHUYẾN MÃI</label>
-                    <input type="text" name="ptkm" class="form-control" id="exampleInputPassword1" placeholder="Phần trăm khuyến mãi">
+                    <input type="text" name="phantram_km" class="form-control" id="exampleInputPassword1" placeholder="Phần trăm khuyến mãi">
                   </div>
                   <div class="form-group">
                     <label>NGÀY BẮT ĐẦU</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" name="ngay_bd"/>
                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
@@ -47,7 +47,7 @@
                   <div class="form-group">
                     <label>NGÀY KẾT THÚC</label>
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" name="ngay_kt"/>
                         <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                         </div>
@@ -55,7 +55,7 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">TRẠNG THÁI</label>
-                    <input type="text" name="trangthai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
@@ -67,8 +67,13 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
+                <?php
+                  if(isset($thongBao) && $thongBao != ""){
+                      echo $thongBao;
+                  }
+                ?>
               </form>
             </div>
             <!-- /.card -->
