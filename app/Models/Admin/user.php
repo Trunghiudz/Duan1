@@ -8,8 +8,9 @@
         $sql="delete from user where id_user=".$id_user;
         pdo_execute($sql);
     }
-    function insert_user($tieude,$noidung,$ngayDang,$trangthai){
-        $sql="insert into user(hoTen, soDienThoai, email, diachi, taiKhoan, matKhau, ngay_sinh, trangThai) values ('$tieude','$noidung','$ngayDang', '$trangthai')";
+    function insert_user($hoTen, $soDienThoai, $email, $diaChi, $taiKhoan, $matKhau, $trangThai, $id_role){
+        $sql="insert into user(hoTen, soDienThoai, email, diaChi, taiKhoan, matKhau, trangThai, id_role) values ('$hoTen','$soDienThoai','$email','$diaChi','$taiKhoan','$matKhau' '$trangThai','$id_role')";
         pdo_execute($sql);
     }
+
 ?>

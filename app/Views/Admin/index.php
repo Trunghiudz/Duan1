@@ -87,6 +87,19 @@
             include "user/list.php";
             break;
         case 'adduser':
+            if (isset($_POST['gui'])) {
+                $hoTen=$_POST['hoTen'];
+                $soDienThoai=$_POST['soDienThoai'];
+                $diaChi=$_POST['diaChi'];
+                $email=$_POST['email'];
+                $taiKhoan=$_POST['taiKhoan'];
+                $matKhau=$_POST['matKhau'];
+                $trangThai=$_POST['trangThai'];
+                $id_role=$_POST['id_role'];
+                insert_user($hoTen, $soDienThoai, $email, $diaChi, $taiKhoan, $matKhau, $trangThai, $id_role);
+                $thongBao = " Thêm thành công";
+            }
+            
             include "user/add.php";
             break;
         case 'listtt':

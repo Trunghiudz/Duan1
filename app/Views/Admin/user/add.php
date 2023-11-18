@@ -29,15 +29,15 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">TÊN USER</label>
-                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên user">
+                    <input type="text" name="hoTen" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên user">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TÊN ĐĂNG NHẬP</label>
-                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đăng nhập">
+                    <input type="text" name="taiKhoan" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đăng nhập">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" name="matKhau" class="form-control" id="exampleInputPassword1" placeholder="Password">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">EMAIL</label>
@@ -45,22 +45,22 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ĐỊA CHỈ</label>
-                    <input type="text" name="diachi" class="form-control" id="exampleInputEmail1" placeholder="Nhập địa chỉ">
+                    <input type="text" name="diaChi" class="form-control" id="exampleInputEmail1" placeholder="Nhập địa chỉ">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ĐIỆN THOẠI</label>
-                    <input type="number" name="sodienthoai" class="form-control" id="exampleInputEmail1" placeholder="Nhập số điện thoại">
+                    <input type="text" name="soDienThoai" class="form-control" id="exampleInputEmail1" placeholder="Nhập số điện thoại">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">VAI TRÒ</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option>Alaska</option>
-                      <option>California</option>
+                    <select class="form-control select2" style="width: 100%;" name="id_role">
+                      <option value="0">Khách hàng</option>
+                      <option value="1">Quản trị</option>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangthai" class="form-control" id="exampleInputEmail1" placeholder="Nhập trạng thái">
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Nhập trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
@@ -71,7 +71,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
               </form>
             </div>
