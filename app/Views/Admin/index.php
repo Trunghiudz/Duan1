@@ -9,6 +9,7 @@
   include("../../Models/Admin/khuyenmai.php");
   include("../../Models/Admin/lienhe.php");
   include("../../Models/Admin/binhluan.php");
+  include("../../Models/Admin/banner.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -251,11 +252,49 @@
             include "bienthe/add.php";
             break;
         case 'listbanner':
+            $listbanner=load_all_banner();
             include "banner/list.php";
             break;
-        case 'addbanner':
-            include "banner/add.php";
-            break;
+            case 'suabanner':
+                if (isset($_GET['id_banner'])) {
+                    $id_banner = $_GET['id_banner'];
+                    $pro_one =queryonebanner($id_banner);
+                }
+                include 'banner/update.php';
+                
+                break;  
+            case 'xoabanner':
+                if (isset($_GET['id_banner'])&&($_GET['id_banner'])>0) {
+                    delete_banner($_GET['id_banner']);
+                }
+                $listbanner=load_all_banner();
+                include "banner/list.php";
+                break;  
+            case 'updatebanner':
+                if (isset($_POST['update'])) {
+                    $id_banner=$_POST['id_banner'];
+                    $ten = $_POST['ten'];
+                    $img = $_POST['img'];
+                    $link = $_POST['link'];
+                    $trangThai	 = $_POST['trangThai'];
+                    updatebanner($id_banner,$ten,$img,$link,$trangThai);
+                    $thongBao = " Cập nhập thành công";
+                }
+    
+                $listbanner = load_all_banner();
+                include 'banner/list.php';
+            case 'addbanner':
+                if (isset($_POST['gui'])) {
+                    $ten=$_POST['banner'];
+                    $img=$_POST['img'];
+                    $link=$_POST['link'];
+                    $trangThai=$_POST['trangThai'];
+                    insert_banner($ten,$img,$link,$trangThai);
+                    $thongBao = " Thêm thành công";
+                }
+                include "banner/add.php";
+                break;
+
         default:
             
             break;

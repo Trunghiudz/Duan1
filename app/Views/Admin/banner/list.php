@@ -35,18 +35,35 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
-                    </td>
-                  </tr>
+                  <?php
+                    $stt=0;
+                    foreach($listbanner as $banner){ 
+                      $stt++;
+                    extract($banner);
+                    $suabanner = "index.php?act=suabanner&id_banner=".$id_banner;
+                    $xoabanner = "index.php?act=xoabanner&id_banner=".$id_banner;
+                      
+                    $img = "../../upload/".$img;
+                    if(is_file($img)){
+                        $img = "<img src='".$img."' height = '60px'>";
+                    }else{
+                        $img = "No Photo";
+                    }
+                    
+                    echo '<tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$ten.'</td>
+                      <td>'.$img.'</td>
+                      <td>'.$link.'</td>
+                      <td>'.$trangThai.'</td>
+                      <td>
+                      <a href="'.$suabanner.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoabanner.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
+                      </td>
+                    </tr>';
+                  }
+                  ?>
+                
                   </tbody>
                 </table>
               </div>
@@ -63,4 +80,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    

@@ -1,4 +1,10 @@
-<!-- Content Wrapper. Contains page content -->
+<?php
+if(is_array($banner)){
+    extract($banner);
+}
+
+?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -22,38 +28,34 @@
             <!-- jquery validation -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Thêm danh banner</small></h3>
+                <h3 class="card-title">Thêm Banner mới</small></h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm" method="post" enctype="multipart/form-data">
+              <form role="form" id="quickForm" action="index.php?act=updatebanner" method="post">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">TÊN BANNER</label>
-                    <input type="text" name="banner" class="form-control" id="exampleInputEmail1" placeholder="Tên banner">
+                    <label for="exampleInputEmail1">Tên</label>
+                    <input type="text" name="ten" class="form-control" id="exampleInputEmail1" placeholder="Tên banner" value="<?=$ten?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">ẢNH</label><br>
-                    <input type="file" name="img"  id="exampleInputPassword1" placeholder="ảnh">
+                    <label for="exampleInputEmail1">Ảnh</label>
+                    <input type="file" name="img" class="form-control" id="exampleInputPassword1" placeholder="Ảnh banner" value="<?= $img?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">LINK</label>
-                    <input type="text" name="link" class="form-control" id="exampleInputEmail1" placeholder="Link">
+                    <label for="exampleInputEmail1">Đường Dẫn</label>
+                    <input type="text" name="link" class="form-control" id="exampleInputEmail1" placeholder="Đường dẫn liên kết" value="<?= $link?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái">
+                    <label for="exampleInputEmail1">Trạng thái</label>
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái" value=<?=$trangThai?>>
+                  </div>
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="capnhat">CẬP NHẬT</button>
                 </div>
-                <?php
-                    if(isset($thongBao) && $thongBao != ""){
-                        echo $thongBao;
-                    }
-                ?>
               </form>
             </div>
             <!-- /.card -->
@@ -62,7 +64,6 @@
           <!-- right column -->
           <div class="col-md-6">
 
-          </div>
           </div>
           <!--/.col (right) -->
         </div>
