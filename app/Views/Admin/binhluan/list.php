@@ -36,19 +36,21 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 411</td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
-                    </td>
-                  </tr>
+                  <?php foreach ($listbl as $bl) { 
+                                  extract($bl);
+                                ?>
+                                <tr>
+                                  <td><input type="checkbox" name="checkbox" id=""></td>
+                                  <td><?= $id_binhluan    ?></td>
+                                  <td><?= $id_user   ?></td>
+                                  <td><?= $id_sanpham     ?></td>
+                                  <td><?= $ngayBinhLuan   ?></td>
+                                  <td><?= $trangThai  ?></td>
+                                  <td>
+                                      <a href="index.php?act=xoabl&id_binhluan=<?php echo $id_binhluan ?>"><input type="button" name="" value="Xoá" id=""></a>
+                                  </td>
+                                </tr>
+                                <?php  } ?>
                   </tbody>
                 </table>
               </div>

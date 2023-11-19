@@ -8,6 +8,7 @@
   include("../../Models/Admin/user.php");
   include("../../Models/Admin/khuyenmai.php");
   include("../../Models/Admin/lienhe.php");
+  include("../../Models/Admin/binhluan.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -58,8 +59,17 @@
         case 'addsp':
             include "sanpham/add.php";
             break;
-        case 'listbl':
+        case "listbl":
+            $listbl = load_binhluan();
             include "binhluan/list.php";
+            break;
+        case "xoabl":
+            if (isset($_GET['id_binhluan'])) {
+                $id_binhluan = $_GET['id_binhluan'];
+                delete_binhluan($id_binhluan);
+            }
+            $listbl = load_binhluan();
+            include "binhluan/list_bl.php";
             break;
         case 'addbl':
             include "binhluan/add.php";
