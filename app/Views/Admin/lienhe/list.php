@@ -11,7 +11,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
-
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -34,17 +33,25 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
-                    </td>
-                  </tr>
+                  <?php
+                    $stt=0;
+                    foreach($listlienhe as $lienhe){
+                      $stt++;
+                      extract($lienhe);
+                      $sualh = "index.php?act=sualh&id_lienhe=".$id_lienhe;
+                      $xoalh = "index.php?act=xoalh&id_lienhe=".$id_lienhe;
+                      echo '<tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$id_user.'</td>
+                      <td>'.$noi_dung.'</td>
+                      <td>'.$trangThai.'</td>
+                      <td>
+                      <a href="'.$sualh.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoalh.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
+                      </td>
+                    </tr>';
+                    }
+                  ?>
                   </tbody>
                 </table>
               </div>

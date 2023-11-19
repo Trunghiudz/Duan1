@@ -25,19 +25,19 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm">
+              <form role="form" id="quickForm" method="post">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">MÃ KHÁCH HÀNG</label>
-                    <input type="text" name="makm" class="form-control" id="exampleInputEmail1" placeholder="Mã khách hàng">
+                    <input type="text" name="id_user" class="form-control" id="exampleInputEmail1" placeholder="Mã khách hàng">
                   </div>
                   <div class="form-group">
                     <label>NỘI DUNG</label>
-                    <textarea class="form-control" rows="3" placeholder="Nội dung ..."></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Nội dung ..." name="noi_dung"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">TRẠNG THÁI</label>
-                    <input type="text" name="trangthai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
@@ -48,7 +48,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
               </form>
             </div>

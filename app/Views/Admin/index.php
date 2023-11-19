@@ -149,10 +149,27 @@
             include "tintuc/list.php";
             break;
         case 'listlh':
-            $listlienhe=load_all_tintuc();
+            $listlienhe=load_all_lienhe();
+            include "lienhe/list.php";
+            break;
+        case 'sualh':
+            include "lienhe/update.php";
+            break;
+        case 'xoalh':
+            if (isset($_GET['id_lienhe'])&&($_GET['id_lienhe'])>0) {
+                delete_lienhe($_GET['id_lienhe']);
+            }
+            $listlienhe=load_all_lienhe();
             include "lienhe/list.php";
             break;
         case 'addlh':
+            if (isset($_POST['gui'])) {
+                $noidung=$_POST['noidung'];
+                $trangthai=$_POST['trangThai'];
+                $id_user=$_POST['id_user'];
+                insert_lienhe($noi_dung, $trangThai, $id_user);
+                $thongBao = " Thêm thành công";
+            }
             include "lienhe/add.php";
             break;
         case 'listkm':
