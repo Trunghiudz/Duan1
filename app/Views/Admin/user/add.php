@@ -61,9 +61,9 @@
                     <label for="exampleInputEmail1">VAI TRÒ</label>
                     <select class="form-control select2" style="width: 100%;" name="id_role">
                       <?php 
-                        foreach ($list as $danhmuc){
-                        extract($danhmuc);
-                        echo '<option value="'.$id.'">'.$name.'</option>';
+                        foreach ($listrole as $role){
+                        extract($role);
+                        echo '<option value="'.$id_role.'">'.$chuc_vu.'</option>';
                       }
                        ?>
                     </select>

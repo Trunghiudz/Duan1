@@ -10,6 +10,7 @@
   include("../../Models/Admin/lienhe.php");
   include("../../Models/Admin/binhluan.php");
   include("../../Models/Admin/banner.php");
+  include("../../Models/Admin/chucvu.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -89,6 +90,10 @@
             include "user/list.php";
             break;
         case 'suauser':
+            if(isset($_GET['id_user']) && $_GET['id_user'] > 0){
+                $id_user = $_GET['id_user'];
+                loadone_user($id_user);
+            }
             include "user/update.php";
             break;
         case 'xoauser':
@@ -102,7 +107,7 @@
         case 'adduser':
             if (isset($_POST['gui'])) {
                 $hoTen=$_POST['hoTen'];
-                $soDienThoai=$_POST['soDienThoai'];
+                $soDienThoai=$_POST['soDienThoai']; 
                 $diaChi=$_POST['diaChi'];
                 $email=$_POST['email'];
                 $taiKhoan=$_POST['taiKhoan'];
@@ -294,7 +299,11 @@
                 }
                 include "banner/add.php";
                 break;
-
+            case 'listcv':
+                $listchucvu=load_all_cv();
+                include "chucvu/list.php";
+            case 'addcv':
+                include "chucvu/list.php";
         default:
             
             break;
