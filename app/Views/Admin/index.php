@@ -153,7 +153,24 @@
             include "lienhe/list.php";
             break;
         case 'sualh':
+            if(isset($_GET['id_lienhe']) && $_GET['id_lienhe'] > 0){
+                $id_lienhe = $_GET['id_lienhe'];
+                $lienhe = loadone_lienhe($id_lienhe);
+            }
             include "lienhe/update.php";
+            break;
+        case 'updatelh':
+            if(isset($_POST['capnhat'])){
+                $id_lienhe = $_POST['id_lienhe'];
+                $noi_dung=$_POST['noi_dung'];
+                $trangThai=$_POST['trangThai'];
+                $id_user=$_POST['id_user'];
+                update_lienhe($id_lienhe,$noi_dung, $trangThai, $id_user);
+                $thongBao = " Cập nhập thành công";
+            }
+    
+            $listlienhe=load_all_lienhe();
+            include "lienhe/list.php";
             break;
         case 'xoalh':
             if (isset($_GET['id_lienhe'])&&($_GET['id_lienhe'])>0) {
