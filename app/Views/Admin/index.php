@@ -250,12 +250,6 @@
             }
             include "khuyenmai/add.php";
             break;
-        case 'listbt':
-            include "bienthe/list.php";
-            break;
-        case 'addbt':
-            include "bienthe/add.php";
-            break;
         case 'listbanner':
             $listbanner=load_all_banner();
             include "banner/list.php";

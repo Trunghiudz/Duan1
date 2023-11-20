@@ -25,7 +25,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm">
+              <form role="form" id="quickForm" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">TÊN SẢN PHẨM</label>
@@ -33,11 +33,8 @@
                   </div>
                   <div class="form-group">
                     <label>NGÀY NHẬP</label>
-                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                        <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
+                    <div class="input-group date" id="reservationdate">
+                        <input type="date" class="form-control datetimepicker-input"/>
                     </div>
                   </div>
                   <div class="form-group">

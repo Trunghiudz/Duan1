@@ -28,27 +28,38 @@
                   <tr>
                     <th>ID</th>
                     <th>TÊN SẢN PHẨM</th>
+                    <th>MÀU SẮC</th>
+                    <th>DUNG LƯỢNG</th>
+                    <th>ẢNH</th>
+                    <th>LƯỢT XEM</th>
                     <th>NGÀY NHẬP</th>
-                    <th>ẢNH SẢN PHẨM</th>
                     <th>MÔ TẢ</th>
-                    <th>TRẠNG THÁI</th>
+                    <th>DANH MỤC</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td></td>
-                    <td> 4</td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
-                    </td>
-                  </tr>
+                  <?php
+                    $stt=0;
+                    foreach($listsanpham as $sanpham){
+                      $stt++;
+                      extract($sanpham);
+                      $suakm = "index.php?act=suakm&id_km=".$id_km;
+                      $xoakm = "index.php?act=xoakm&id_km=".$id_km;
+                      echo '<tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$ma_km.'</td>
+                      <td>'.$phantram_km.'</td>
+                      <td>'.$trangThai.'</td>
+                      <td>'.$ngay_bd.'</td>
+                      <td>'.$ngay_kt.'</td>
+                      <td>
+                      <a href="'.$suakm.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoakm.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
+                      </td>
+                    </tr>';
+                    }
+                  ?>
                   </tbody>
                 </table>
               </div>
