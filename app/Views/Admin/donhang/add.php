@@ -25,38 +25,52 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm">
+              <form role="form" id="quickForm" method="post">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">TÊN ĐƠN HÀNG</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">TÊN KHÁCH HÀNG</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label>NGÀY ĐẶT</label>
-                    <div class="input-group date" id="reservationdate">
-                        <input type="date" class="form-control datetimepicker-input"/>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">MÃ KHUYẾN MÃI</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option>Alaska</option>
-                      <option>California</option>
-                    </select>
+                    <label for="exampleInputEmail1">HỌ TÊN</label>
+                    <input type="text" name="hoTen" class="form-control" id="exampleInputEmail1" placeholder="Họ Tên">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangthai" class="form-control" id="exampleInputEmail1" placeholder="Nhập trạng thái">
+                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="trangThai">
                   </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">SỐ ĐIỆN THOẠI</label>
+                    <input type="text" name="soDienThoai" class="form-control" id="exampleInputEmail1" placeholder="Số điện thoại">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">EMAIL</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">ĐỊA CHỈ</label>
+                    <input type="text" name="diaChi" class="form-control" id="exampleInputEmail1" placeholder="Địa chỉ">
+                  </div>
+                  <div class="form-group">
+                    <label>NGÀY ĐẶT HÀNG</label>
+                    <div class="input-group date" id="reservationdate">
+                        <input type="date" class="form-control datetimepicker-input" name="ngay_dathang"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">TỔNG ĐƠN HÀNG</label>
+                    <input type="text" name="tong_donhang" class="form-control" id="exampleInputEmail1" placeholder="TỔNG">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">ID USER</label>
+                    <input type="text" name="id_user" class="form-control" id="exampleInputEmail1" placeholder="ID">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">ID KHUYẾN MÃI</label>
+                    <input type="text" name="id_km" class="form-control" id="exampleInputEmail1" placeholder="ID">
+                  </div>
+                  
                  
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
               </form>
             </div>

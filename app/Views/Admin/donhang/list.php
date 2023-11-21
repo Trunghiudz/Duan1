@@ -27,30 +27,44 @@
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>TEN</th>
+                    <th>HỌ TÊN</th>
+                    <th>TRẠNG THÁI</th>
+                    <th>SỐ ĐIỆN THOẠI</th>
+                    <th>Email</th>
+                    <th>ĐỊA CHỈ</th>
                     <th>NGÀY ĐẶT HÀNG</th>
                     <th>TỔNG ĐƠN HÀNG</th>
-                    <th>TRẠNG THÁI</th>
-                    <th>KHUYẾN MÃI</th>
-                    <th>TRẠNG THÁI</th>
+                    <th>ID KHUYẾN MÃI</th>
+                    <th>ID USER</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-block btn-default">Sửa</button> <button type="button" class="btn btn-block btn-default">Xóa</button>
-                    </td>
-                  </tr>
+                  <?php
+                    $stt=0;
+                    foreach($listdonhang as $donhang){
+                      $stt++;
+                      extract($donhang);
+                      $suadh = "index.php?act=suadh&id_donhang=".$id_donhang;
+                      $xoadh = "index.php?act=xoadh&id_donhang=".$id_donhang;
+                      echo '<tr>
+                      <td>'.$stt.'</td>
+                      <td>'.$hoTen.'</td>
+                      <td>'.$trangThai.'</td>
+                      <td>'.$soDienThoai.'</td>
+                      <td>'.$email.'</td>
+                      <td>'.$diaChi.'</td>
+                      <td>'.$ngay_dathang.'</td>
+                      <td>'.$tong_donhang.'</td>
+                      <td>'.$id_user.'</td>
+                      <td>'.$id_km.'</td>
+                      <td>
+                      <a href="'.$suadh.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
+                      <a href="'.$xoadh.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
+                      </td>
+                    </tr>';
+                    }
+                  ?>
                   </tbody>
                 </table>
               </div>

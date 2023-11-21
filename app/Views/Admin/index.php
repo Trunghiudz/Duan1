@@ -11,6 +11,7 @@
   include("../../Models/Admin/binhluan.php");
   include("../../Models/Admin/banner.php");
   include("../../Models/Admin/chucvu.php");
+  include("../../Models/Admin/donhang.php");
 ?>
 <?php
   if (isset($_GET['act'])) {
@@ -77,9 +78,23 @@
             include "binhluan/add.php";
             break;
         case 'listdh':
+            $listdonhang=load_all_donhang();
             include "donhang/list.php";
             break;
         case 'adddh':
+            if (isset($_POST['gui'])) {
+                $hoTen=$_POST['hoTen'];
+                $trangThai=$_POST['trangThai'];
+                $soDienThoai=$_POST['soDienThoai']; 
+                $email=$_POST['email'];
+                $diaChi=$_POST['diaChi'];
+                $ngay_dathang=$_POST['ngay_dathang'];
+                $tong_donhang=$_POST['tong_donhang'];
+                $id_user=$_POST['id_user'];
+                $id_km=$_POST['id_km'];
+                insert_donhang($hoTen, $trangThai, $soDienThoai, $email, $diaChi, $ngay_dathang, $tong_donhang, $id_user, $id_km);
+                $thongBao = " Thêm thành công";
+            }
             include "donhang/add.php";
             break;
         case 'listuser':
