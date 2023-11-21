@@ -285,13 +285,20 @@
                 include "banner/list.php";
                 break;  
             case 'updatebanner':
-                if (isset($_POST['update'])) {
+                if (isset($_POST['capnhat'])) {
                     $id_banner=$_POST['id_banner'];
                     $ten = $_POST['ten'];
-                    $img = $_POST['img'];
+                    $hinh=$_FILES['img']['name'];
+                    $target_dir = "../../../public/upload/";
+                    $target_file = $target_dir . basename($_FILES["img"]["name"]);
                     $link = $_POST['link'];
                     $trangThai	 = $_POST['trangThai'];
-                    updatebanner($id_banner,$ten,$img,$link,$trangThai);
+                    if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                        // echo "The file ". htmlspecialchars( basename( $_FILES["hinh"]["name"])). " has been uploaded.";
+                      } else {
+                        // echo "Sorry, there was an error uploading your file.";
+                      }
+                    updatebanner($id_banner,$ten,$hinh,$link,$trangThai);
                     $thongBao = " Cập nhập thành công";
                 }
     
@@ -300,10 +307,17 @@
             case 'addbanner':
                 if (isset($_POST['gui'])) {
                     $ten=$_POST['banner'];
-                    $img=$_POST['img'];
+                    $hinh=$_FILES['img']['name'];
+                    $target_dir = "../../../public/upload/";
+                    $target_file = $target_dir . basename($_FILES["img"]["name"]);
                     $link=$_POST['link'];
                     $trangThai=$_POST['trangThai'];
-                    insert_banner($ten,$img,$link,$trangThai);
+                    if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                        // echo "The file ". htmlspecialchars( basename( $_FILES["hinh"]["name"])). " has been uploaded.";
+                      } else {
+                        // echo "Sorry, there was an error uploading your file.";
+                      }
+                    insert_banner($ten,$hinh,$link,$trangThai);
                     $thongBao = " Thêm thành công";
                 }
                 include "banner/add.php";

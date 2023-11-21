@@ -43,17 +43,17 @@
                     $suabanner = "index.php?act=suabanner&id_banner=".$id_banner;
                     $xoabanner = "index.php?act=xoabanner&id_banner=".$id_banner;
                       
-                    $img = "../../upload/".$img;
-                    if(is_file($img)){
-                        $img = "<img src='".$img."' height = '60px'>";
+                    $hinhpart = "../../../public/upload/".$img;
+                    if(is_file($hinhpart)){
+                        $hinh = "<img src='".$hinhpart."' height = '60px'>";
                     }else{
-                        $img = "No Photo";
+                        $hinh = "No Photo";
                     }
                     
                     echo '<tr>
                       <td>'.$stt.'</td>
                       <td>'.$ten.'</td>
-                      <td>'.$img.'</td>
+                      <td>'.$hinh.'</td>
                       <td>'.$link.'</td>
                       <td>'.$trangThai.'</td>
                       <td>

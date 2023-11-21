@@ -8,12 +8,12 @@
         $sql="delete from banner where id_banner=".$id_banner;
         pdo_execute($sql);
     }
-    function insert_banner($ten,$img,$link,$trangThai){
-        $sql="insert into banner(ten,img,link,trangThai) values ('$ten','$img','$link','$trangThai')";
+    function insert_banner($ten,$hinh,$link,$trangThai){
+        $sql="insert into banner(ten,img,link,trangThai) values ('$ten','$hinh','$link','$trangThai')";
         pdo_execute($sql);
     }
-    function updatebanner($id_banner,$ten,$img,$link,$trangThai){
-        $sql = "update banner set ten='$ten',img='$img',link='$link',trangThai='$trangThai' where id_banner =".$id_banner;
+    function updatebanner($id_banner,$ten,$hinh,$link,$trangThai){
+        $sql = "update banner set ten='$ten',img='$hinh',link='$link',trangThai='$trangThai' where id_banner =".$id_banner;
         pdo_execute($sql);
     }
     function queryonebanner($id_banner){

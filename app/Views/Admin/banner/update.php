@@ -1,7 +1,13 @@
 <?php
-if(is_array($banner)){
-    extract($banner);
+if(is_array($pro_one)){
+    extract($pro_one);
 }
+$hinhpart = "../../../public/upload/".$img;
+                    if(is_file($hinhpart)){
+                        $hinh = "<img src='".$hinhpart."' height = '60px'>";
+                    }else{
+                        $hinh = "No Photo";
+                    }
 
 ?>
 
@@ -32,15 +38,18 @@ if(is_array($banner)){
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm" action="index.php?act=updatebanner" method="post">
+              <form role="form" id="quickForm" action="index.php?act=updatebanner" method="post" enctype="multipart/form-data">
                 <div class="card-body">
+                  <div class="form-group">
+                    <input type="hidden" name="id_banner" value="<?=$id_banner?>">
+                  </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tên</label>
                     <input type="text" name="ten" class="form-control" id="exampleInputEmail1" placeholder="Tên banner" value="<?=$ten?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Ảnh</label>
-                    <input type="file" name="img" class="form-control" id="exampleInputPassword1" placeholder="Ảnh banner" value="<?= $img?>">
+                    <input type="file" name="img" class="form-control" id="exampleInputPassword1" placeholder="Ảnh banner" value="<?=$hinh?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Đường Dẫn</label>
