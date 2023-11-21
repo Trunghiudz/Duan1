@@ -61,9 +61,9 @@
                     <label for="exampleInputEmail1">VAI TRÒ</label>
                     <select class="form-control select2" style="width: 100%;" name="id_role">
                       <?php 
-                        foreach ($listrole as $role){
+                        foreach ($listchucvu as $role){
                         extract($role);
-                        echo '<option value="'.$id_role.'">'.$chuc_vu.'</option>';
+                        echo '<option value="'.$id_role.'">'.$ten_cv.'</option>';
                       }
                        ?>
                     </select>
@@ -83,6 +83,11 @@
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
+                <?php
+                  if(isset($thongBao) && $thongBao != ""){
+                      echo $thongBao;
+                  }
+                ?>
               </form>
             </div>
             <!-- /.card -->

@@ -17,4 +17,8 @@
         $result = pdo_query_one($sql);
         return $result;
     }
+    function update_user($id_user,$hoTen, $soDienThoai, $email, $diaChi, $taiKhoan, $matKhau,$ngay_sinh, $trangThai, $id_role){
+        $sql = "update user set hoTen='$hoTen', soDienThoai='$soDienThoai', email='$email', diaChi='$diaChi', taiKhoan='$taiKhoan', matKhau='$matKhau', ngay_sinh='$ngay_sinh', trangThai='$trangThai', id_role='$id_role' where id_user =".$id_user;
+        pdo_execute($sql);
+    }
 ?>

@@ -1,3 +1,8 @@
+<?php
+  if(is_array($user)){
+    extract($user);
+  }
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -28,49 +33,52 @@
               <form role="form" id="quickForm" method="post" action="index.php?act=updateuser">
                 <div class="card-body">
                   <div class="form-group">
+                    <input type="hidden" name="id_user" value="<?=$id_user?>" >
+                  </div>
+                  <div class="form-group">
                     <label for="exampleInputEmail1">TÊN USER</label>
-                    <input type="text" name="hoTen" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên user">
+                    <input type="text" name="hoTen" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên user" value="<?=$hoTen?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TÊN ĐĂNG NHẬP</label>
-                    <input type="text" name="taiKhoan" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đăng nhập">
+                    <input type="text" name="taiKhoan" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên đăng nhập" value="<?=$taiKhoan?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">PASSWORD</label>
-                    <input type="password" name="matKhau" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" name="matKhau" class="form-control" id="exampleInputPassword1" placeholder="Password" value="<?=$matKhau?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">EMAIL</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" value="<?=$email?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ĐỊA CHỈ</label>
-                    <input type="text" name="diaChi" class="form-control" id="exampleInputEmail1" placeholder="Nhập địa chỉ">
+                    <input type="text" name="diaChi" class="form-control" id="exampleInputEmail1" placeholder="Nhập địa chỉ" value="<?=$diaChi?>">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">ĐIỆN THOẠI</label>
-                    <input type="text" name="soDienThoai" class="form-control" id="exampleInputEmail1" placeholder="Nhập số điện thoại">
+                    <input type="text" name="soDienThoai" class="form-control" id="exampleInputEmail1" placeholder="Nhập số điện thoại" value="<?=$soDienThoai?>">
                   </div>
                   <div class="form-group">
                     <label>NGÀY SINH</label>
                     <div class="input-group date" id="reservationdate" >
-                        <input type="date" class="form-control datetimepicker-input" name="ngay_sinh"/>
+                        <input type="date" class="form-control datetimepicker-input" name="ngay_sinh" value="<?=$ngay_sinh?>"/>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">VAI TRÒ</label>
                     <select class="form-control select2" style="width: 100%;" name="id_role">
                       <?php 
-                        foreach ($listrole as $role){
+                        foreach ($listchucvu as $role){
                         extract($role);
-                        echo '<option value="'.$id_role.'">'.$chuc_vu.'</option>';
+                        echo '<option value="'.$id_role.'">'.$ten_cv.'</option>';
                       }
                        ?>
                     </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" placeholder="Nhập trạng thái">
+                    <input type="text" name="trangThai" class="form-control" placeholder="Nhập trạng thái" value="<?=$trangThai?>">
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">
@@ -81,8 +89,13 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary" name="capnhap">Submit</button>
+                  <button type="submit" class="btn btn-primary" name="capnhat">Submit</button>
                 </div>
+                <?php
+                  if(isset($thongBao) && $thongBao != ""){
+                      echo $thongBao;
+                  }
+                ?>
               </form>
             </div>
             <!-- /.card -->

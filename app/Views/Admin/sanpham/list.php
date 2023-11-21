@@ -30,36 +30,48 @@
                     <th>TÊN SẢN PHẨM</th>
                     <th>MÀU SẮC</th>
                     <th>DUNG LƯỢNG</th>
-                    <th>ẢNH</th>
+                    <th>ẢNH SẢN PHẨM</th>
                     <th>LƯỢT XEM</th>
                     <th>NGÀY NHẬP</th>
                     <th>MÔ TẢ</th>
-                    <th>DANH MỤC</th>
+                    <th>IDDM</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <?php
-                    $stt=0;
-                    foreach($listsanpham as $sanpham){
+                  <tr>
+                    <?php 
+                      $stt=0;
+                      foreach($listsp as $sp) {
                       $stt++;
-                      extract($sanpham);
-                      $suakm = "index.php?act=suakm&id_km=".$id_km;
-                      $xoakm = "index.php?act=xoakm&id_km=".$id_km;
-                      echo '<tr>
-                      <td>'.$stt.'</td>
-                      <td>'.$ma_km.'</td>
-                      <td>'.$phantram_km.'</td>
-                      <td>'.$trangThai.'</td>
-                      <td>'.$ngay_bd.'</td>
-                      <td>'.$ngay_kt.'</td>
-                      <td>
-                      <a href="'.$suakm.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
-                      <a href="'.$xoakm.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
-                      </td>
-                    </tr>';
-                    }
-                  ?>
+                      extract($sp);
+                      $hinhpart = "../../../public/upload/".$img;
+                      if(is_file($hinhpart)){
+                        $hinh = "<img src='".$hinhpart."' height = '60px'>";
+                      }else{
+                        $hinh = "No Photo";
+                      }
+                    ?>
+                    
+                    <td><?= $stt ?></td>
+                    <td><?= $ten_sanpham ?></td>
+                    <td><?= $mauSac ?></td>
+                    <td><?= $dungLuong ?></td>
+                    <td><?= $hinh ?></td>
+                    <td><?= $luotXem ?></td>
+                    <td><?= $ngay_nhap ?></td>
+                    <td><?= $moTa	 ?></td>
+                    <td><?= $id_dm  ?></td>
+                    <td>
+                      <a href="index.php?act=suasp&id_sanpham=<?= $id_sanpham ?>">
+                        <button type="button" class="btn btn-block btn-default">Sửa</button> 
+                      </a>
+                      <a href="index.php?act=xoasp&id_sanpham=<?= $id_sanpham ?>">
+                        <button type="button" class="btn btn-block btn-default">Xóa</button>
+                      </a>
+                    </td>
+                  </tr>
+                  <?php } ?>
                   </tbody>
                 </table>
               </div>
@@ -76,4 +88,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    

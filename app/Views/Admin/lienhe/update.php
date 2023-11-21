@@ -37,11 +37,18 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">MÃ KHÁCH HÀNG</label>
-                    <input type="text" name="id_user" class="form-control" id="exampleInputEmail1" placeholder="Mã khách hàng" value="<?=$id_user?>">
+                    <select class="form-control select2" style="width: 100%;" name="id_user">
+                      <?php 
+                        foreach ($listuser as $user){
+                        extract($user);
+                        echo '<option value="'.$id_user.'">'.$hoTen.'</option>';
+                      }
+                       ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label>NỘI DUNG</label>
-                    <textarea class="form-control" rows="3" placeholder="Nội dung ..." name="noi_dung" value="<?=$noi_dung?>"></textarea>
+                    <textarea class="form-control" rows="3" placeholder="Nội dung ..." name="noi_dung" ><?= $noi_dung ?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">TRẠNG THÁI</label>
@@ -65,7 +72,7 @@
                   }
                 ?>
               </form>
-            </div>
+</div>
             <!-- /.card -->
             </div>
           <!--/.col (left) -->
@@ -81,4 +88,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    

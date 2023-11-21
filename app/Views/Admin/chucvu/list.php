@@ -44,13 +44,13 @@
                     echo '<tr>
                     <td>'.$stt.'</td>
                     <td>'.$chuc_vu.'</td>
-                    <td>'.$tenChucVu.'</td>
+                    <td>'.$ten_cv.'</td>
                     <td>'.$trangThai.'</td>
                     <td>
                       <a href="'.$suacv.'"><button type="button" class="btn btn-block btn-default">Sửa</button><a/>
                       <a href="'.$xoacv.'"><button type="button" class="btn btn-block btn-default">Xóa</button><a/>
                     </td>
-                  </tr>';
+                    </tr>';
                   }
                   ?>
                   

@@ -58,12 +58,26 @@
                     <input type="text" name="tong_donhang" class="form-control" id="exampleInputEmail1" placeholder="TỔNG">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">ID USER</label>
-                    <input type="text" name="id_user" class="form-control" id="exampleInputEmail1" placeholder="ID">
+                    <label for="exampleInputEmail1">USER</label>
+                    <select class="form-control select2" style="width: 100%;" name="id_user">
+                      <?php 
+                        foreach ($listuser as $user){
+                        extract($user);
+                        echo '<option value="'.$id_user.'">'.$hoTen.'</option>';
+                      }
+                       ?>
+                    </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">ID KHUYẾN MÃI</label>
-                    <input type="text" name="id_km" class="form-control" id="exampleInputEmail1" placeholder="ID">
+                    <label for="exampleInputEmail1">KHUYẾN MÃI</label>
+                    <select class="form-control select2" style="width: 100%;" name="id_km">
+                      <?php 
+                        foreach ($listkhuyenmai as $khuyenmai){
+                        extract($khuyenmai);
+                        echo '<option value="'.$id_km.'">'.$phantram_km.'</option>';
+                      }
+                       ?>
+                    </select>
                   </div>
                   
                  
@@ -72,6 +86,11 @@
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
+                <?php
+                  if(isset($thongBao) && $thongBao != ""){
+                      echo $thongBao;
+                  }
+                ?>
               </form>
             </div>
             <!-- /.card -->

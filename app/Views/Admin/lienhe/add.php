@@ -28,8 +28,15 @@
               <form role="form" id="quickForm" method="post">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">MÃ KHÁCH HÀNG</label>
-                    <input type="text" name="id_user" class="form-control" id="exampleInputEmail1" placeholder="Mã khách hàng">
+                    <label for="exampleInputEmail1">TÊN KHÁCH HÀNG</label>
+                    <select class="form-control select2" style="width: 100%;" name="id_user">
+                      <?php 
+                        foreach ($listuser as $user){
+                        extract($user);
+                        echo '<option value="'.$id_user.'">'.$hoTen.'</option>';
+                      }
+                       ?>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label>NỘI DUNG</label>
@@ -50,6 +57,11 @@
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary" name="gui">Submit</button>
                 </div>
+                <?php
+                    if(isset($thongBao) && $thongBao != ""){
+                        echo $thongBao;
+                    }
+                ?>
               </form>
             </div>
             <!-- /.card -->
@@ -67,4 +79,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    

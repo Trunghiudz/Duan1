@@ -9,7 +9,7 @@
         pdo_execute($sql);
     }
     function insert_lienhe($noi_dung, $trangThai, $id_user){
-        $sql="insert into lien_he(noi_dung, trangThai, id_user) values ('$noidung', '$trangthai', '$id_user')";
+        $sql="insert into lien_he(noi_dung, trangThai, id_user) values ('$noi_dung', '$trangThai', '$id_user')";
         pdo_execute($sql);
     }
     function update_lienhe($id_lienhe,$noi_dung, $trangThai, $id_user){
