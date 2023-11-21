@@ -63,13 +63,19 @@
                     $ten_sanpham = $_POST['ten_sanpham'];
                     $mauSac = $_POST['mauSac'];
                     $dungLuong = $_POST['dungLuong'];
-                    $img = $_POST['img'];
                     $luotXem = $_POST['luotXem'];
                     $ngay_nhap = $_POST['ngay_nhap'];
                     $moTa = $_POST['moTa'];
                     $id_dm = $_POST['id_dm'];
-                    
-                    update_sp($id_sanpham,$$ten_sanpham,$mauSac,$dungLuong,$img,$luotXem,$ngay_nhap,$moTa,$id_dm);
+                    $hinh=$_FILES['img']['name'];
+                    $target_dir = "../../../public/upload/";
+                    $target_file = $target_dir . basename($_FILES["img"]["name"]);
+                    if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
+                        // echo "The file ". htmlspecialchars( basename( $_FILES["hinh"]["name"])). " has been uploaded.";
+                      } else {
+                        // echo "Sorry, there was an error uploading your file.";
+                      }
+                    update_sp($id_sanpham,$ten_sanpham,$mauSac,$dungLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm);
             }
 
             $listdm=load_all_dm();
@@ -81,6 +87,7 @@
                         $id_sanpham = $_GET['id_sanpham'];
                         $sp = loadone_sp($id_sanpham);
                 }
+                $listdm=load_all_dm();
                 include "sanpham/update.php";
                 break;
         case "xoasp":

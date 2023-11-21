@@ -1,14 +1,14 @@
 <?php 
     
-if(is_array($sp)){
+  if(is_array($sp)){
     extract($sp);
-}
-$hinhpart = "../../../public/upload/".$img;
-                    if(is_file($hinhpart)){
-                        $hinh = "<img src='".$hinhpart."' height = '60px'>";
-                    }else{
-                        $hinh = "No Photo";
-                    }
+  }
+  $hinhpart = "../../../public/upload/".$img;
+  if(is_file($hinhpart)){
+      $hinh = "<img src='".$hinhpart."' height = '60px'>";
+  }else{
+      $hinh = "No Photo";
+  }
 
 ?>
 
@@ -39,9 +39,11 @@ $hinhpart = "../../../public/upload/".$img;
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" id="quickForm" method="post" action="index.php?act=updatesp">
+              <form role="form" id="quickForm" method="post" action="index.php?act=updatesp" enctype="multipart/form-data">
                 <div class="card-body">
-                    <input type="hidden" name="id_sanpham "  value="<?= $id_sanpham  ?>"  id="">
+                  <div class="form-group">
+                    <input type="hidden" name="id_sanpham"  value="<?=$id_sanpham?>">
+                  </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TÊN SẢN PHẨM</label>
                     <input type="text" name="ten_sanpham" value="<?= $ten_sanpham ?>" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên sản phẩm">
@@ -70,13 +72,13 @@ $hinhpart = "../../../public/upload/".$img;
                     <input type="text" name="moTa"  class="form-control datetimepicker-input"  value="<?= $moTa ?>" id="exampleInputEmail1" placeholder="">
                   </div>
                   <div class="form-group">
-                  
-                    <select name="id_dm" id="">
-                        <?php
-                    foreach($listdm as $dm)
-                      { extract($dm); ?>   
-                        <option ><?= $ten_dm ?></option>
-                        <?php } ?>
+                    <select class="form-control select2" style="width: 100%;" name="id_dm">
+                      <?php 
+                        foreach ($listdm as $dm){
+                        extract($dm);
+                        echo '<option value="'.$id_dm.'">'.$ten_dm.'</option>';
+                      }
+                       ?>
                     </select>
                   </div>
                 </div>

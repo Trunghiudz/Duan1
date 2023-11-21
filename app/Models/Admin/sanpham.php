@@ -14,12 +14,12 @@
         pdo_execute($sql);
     }     
     function loadone_sp($id_sanpham){
-        $sql = "select * from san_pham where id_sanpham = '$id_sanpham'";
+        $sql = "select * from san_pham where id_sanpham =".$id_sanpham;
         $result = pdo_query_one($sql);
         return $result;
     }
-    function update_sp($id_sanpham ,$ten_sanpham,$mauSac,$dungLuong,$img,$luotXem,$ngay_nhap,$moTa,$id_dm){
-        $sql = "update san_pham set  ten_sanpham='$ten_sanpham', mauSac='$mauSac',dungLuong='$dungLuong', img='$img', luotXem='$luotXem',ngay_nhap='$ngay_nhap', moTa='$moTa', id_dm='$id_dm' where id_sanpham =".$id_sanpham;
+    function update_sp($id_sanpham ,$ten_sanpham,$mauSac,$dungLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm){
+        $sql = "update san_pham set  ten_sanpham='$ten_sanpham', mauSac='$mauSac',dungLuong='$dungLuong', img='$hinh', luotXem='$luotXem',ngay_nhap='$ngay_nhap', moTa='$moTa', id_dm='$id_dm' where id_sanpham =".$id_sanpham;
         pdo_execute($sql);
     }
 ?>
