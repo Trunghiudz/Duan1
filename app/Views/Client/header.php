@@ -122,7 +122,7 @@
 <a href="#" class="drop-down">OPPO</a><i class="bi bi-plus dropdown-icon"></i>
 </li>
 <li class="menu-item-has-children">
-<a href="#" class="drop-down">Liên Hệ</a><i class="bi bi-plus dropdown-icon"></i>
+<a href="index.php?act=lienhe" class="drop-down">Liên Hệ</a><i class="bi bi-plus dropdown-icon"></i>
 </li>
 </ul>
 <div class="d-lg-none d-block">
