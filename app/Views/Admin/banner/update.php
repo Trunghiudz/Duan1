@@ -56,8 +56,18 @@ $hinhpart = "../../../public/upload/".$img;
                     <input type="text" name="link" class="form-control" id="exampleInputEmail1" placeholder="Đường dẫn liên kết" value="<?= $link?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Trạng thái</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="Trạng thái" value=<?=$trangThai?>>
+                    <label for="exampleInputEmail1">TRẠNG THÁI:</label><br>
+                    <select name="trangThai" id="">
+                      <?php
+                        if ($trangThai=="Ngừng Hoạt Động") {
+                          $s = "Selected";
+                        }else{
+                          $s="";
+                        }
+                      ?>
+                      <option value="Hoạt Động">Hoạt Động</option>
+                      <option value="Ngừng Hoạt Động" <?php echo $s?>>Ngừng Hoạt Động</option>
+                      
                   </div>
                   </div>
                 </div>

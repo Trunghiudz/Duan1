@@ -58,8 +58,18 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" value="<?= $trangThai ?>" id="exampleInputPassword1" placeholder="Trạng thái">
+                    <label for="exampleInputEmail1">TRẠNG THÁI:</label><br>
+                    <select name="trangThai" id="">
+                      <?php
+                        if ($trangThai=="Ngừng Hoạt Động") {
+                          $s = "Selected";
+                        }else{
+                          $s="";
+                        }
+                      ?>
+                      <option value="Hoạt Động">Hoạt Động</option>
+                      <option value="Ngừng Hoạt Động" <?php echo $s?>>Ngừng Hoạt Động</option>
+                      
                   </div>
                   
                     

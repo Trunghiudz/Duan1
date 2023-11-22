@@ -30,11 +30,13 @@
                     <th>TÊN SẢN PHẨM</th>
                     <th>MÀU SẮC</th>
                     <th>DUNG LƯỢNG</th>
+                    <th>SỐ LƯỢNG</th>
                     <th>ẢNH SẢN PHẨM</th>
                     <th>LƯỢT XEM</th>
                     <th>NGÀY NHẬP</th>
                     <th>MÔ TẢ</th>
                     <th>IDDM</th>
+                    <th>TRẠNG THÁI</th>
                     <th>THAO TÁC</th>
                   </tr>
                   </thead>
@@ -57,11 +59,13 @@
                     <td><?= $ten_sanpham ?></td>
                     <td><?= $mauSac ?></td>
                     <td><?= $dungLuong ?></td>
+                    <td><?= $soLuong ?></td>
                     <td><?= $hinh ?></td>
                     <td><?= $luotXem ?></td>
                     <td><?= $ngay_nhap ?></td>
                     <td><?= $moTa	 ?></td>
                     <td><?= $id_dm  ?></td>
+                    <td><?= $trangThai ?></td>
                     <td>
                       <a href="index.php?act=suasp&id_sanpham=<?= $id_sanpham ?>">
                         <button type="button" class="btn btn-block btn-default">Sửa</button> 

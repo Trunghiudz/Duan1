@@ -70,7 +70,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" placeholder="Nhập trạng thái">
+                    <select name="trangThai" id="">
+                      <option value="Hoạt Động">Hoạt Động</option>
+                      <option value="Ngừng Hoạt Động">Ngừng Hoạt Động</option>
+                    </select>
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">

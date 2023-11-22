@@ -33,7 +33,10 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="trangThai">
+                    <select name="trangThai" id="">
+                      <option value="Hoạt Động">Hoạt Động</option>
+                      <option value="Ngừng Hoạt Động">Ngừng Hoạt Động</option>
+                    </select>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">SỐ ĐIỆN THOẠI</label>

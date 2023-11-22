@@ -1,6 +1,6 @@
 <?php 
-    function inset_sp($ten_sanpham,$mauSac,$dungLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm){
-        $sql = "insert into san_pham(ten_sanpham,mauSac,dungLuong,img,luotXem,ngay_nhap,moTa,id_dm) values('$ten_sanpham','$mauSac','$dungLuong','$hinh','$luotXem','$ngay_nhap','$moTa','$id_dm')";
+    function inset_sp($ten_sanpham,$mauSac,$dungLuong,$soLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm,$trangThai){
+        $sql = "insert into san_pham(ten_sanpham,mauSac,dungLuong,soLuong,img,luotXem,ngay_nhap,moTa,id_dm,trangThai) values('$ten_sanpham','$mauSac','$dungLuong','$soLuong','$hinh','$luotXem','$ngay_nhap','$moTa','$id_dm','$trangThai')";
         pdo_execute($sql);
     }
 
@@ -18,8 +18,8 @@
         $result = pdo_query_one($sql);
         return $result;
     }
-    function update_sp($id_sanpham ,$ten_sanpham,$mauSac,$dungLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm){
-        $sql = "update san_pham set  ten_sanpham='$ten_sanpham', mauSac='$mauSac',dungLuong='$dungLuong', img='$hinh', luotXem='$luotXem',ngay_nhap='$ngay_nhap', moTa='$moTa', id_dm='$id_dm' where id_sanpham =".$id_sanpham;
+    function update_sp($id_sanpham,$ten_sanpham,$mauSac,$dungLuong,$soLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm,$trangThai){
+        $sql = "update san_pham set  ten_sanpham='$ten_sanpham', mauSac='$mauSac',dungLuong='$dungLuong',soLuong='$soLuong', img='$hinh', luotXem='$luotXem',ngay_nhap='$ngay_nhap', moTa='$moTa', id_dm='$id_dm',trangThai='$trangThai' where id_sanpham =".$id_sanpham;
         pdo_execute($sql);
     }
 ?>

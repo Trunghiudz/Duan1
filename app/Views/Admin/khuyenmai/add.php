@@ -48,8 +48,11 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputPassword1" placeholder="Trạng thái">
+                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
+                    <select name="trangThai" id="">
+                      <option value="Hoạt Động">Hoạt Động</option>
+                      <option value="Ngừng Hoạt Động">Ngừng Hoạt Động</option>
+                    </select>
                   </div>
                   <div class="form-group mb-0">
                     <div class="custom-control custom-checkbox">

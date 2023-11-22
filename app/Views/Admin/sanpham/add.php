@@ -36,6 +36,17 @@
                     <input type="text" name="dungLuong" class="form-control" id="exampleInputEmail1" placeholder="Nhập dung lượng">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputEmail1">SỐ LƯỢNG</label>
+                    <input type="text" name="soLuong" class="form-control" id="exampleInputEmail1" placeholder="Nhập số lượng">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
+                    <select name="trangThai" id="">
+                      <option value="Còn hàng">Còn hàng</option>
+                      <option value="Hết hàng">Hết hàng</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
                     <label>MÀU SẮC:</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" name="mauSac">
                   </div>

@@ -40,8 +40,18 @@
                     <input type="text" name="hoTen" class="form-control" id="exampleInputEmail1" placeholder="Họ Tên" value="<?=$hoTen?>">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">TRẠNG THÁI</label>
-                    <input type="text" name="trangThai" class="form-control" id="exampleInputEmail1" placeholder="trangThai"value="<?=$trangThai?>">
+                    <label for="exampleInputEmail1">TRẠNG THÁI:</label><br>
+                    <select name="trangThai" id="">
+                      <?php
+                        if ($trangThai=="Ngừng Hoạt Động") {
+                          $s = "Selected";
+                        }else{
+                          $s="";
+                        }
+                      ?>
+                      <option value="Hoạt Động">Hoạt Động</option>
+                      <option value="Ngừng Hoạt Động" <?php echo $s?>>Ngừng Hoạt Động</option>
+                      
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">SỐ ĐIỆN THOẠI</label>

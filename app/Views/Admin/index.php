@@ -67,6 +67,8 @@
                     $ngay_nhap = $_POST['ngay_nhap'];
                     $moTa = $_POST['moTa'];
                     $id_dm = $_POST['id_dm'];
+                    $trangThai=$_POST['trangThai'];
+                    $soLuong=$_POST['soLuong'];
                     $hinh=$_FILES['img']['name'];
                     $target_dir = "../../../public/upload/";
                     $target_file = $target_dir . basename($_FILES["img"]["name"]);
@@ -75,7 +77,7 @@
                       } else {
                         // echo "Sorry, there was an error uploading your file.";
                       }
-                    update_sp($id_sanpham,$ten_sanpham,$mauSac,$dungLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm);
+                    update_sp($id_sanpham,$ten_sanpham,$mauSac,$dungLuong,$soLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm,$trangThai);
             }
 
             $listdm=load_all_dm();
@@ -111,6 +113,8 @@
                     $ngay_nhap = $_POST['ngay_nhap'];
                     $moTa = $_POST['moTa'];
                     $id_dm = $_POST['id_dm'];
+                    $trangThai=$_POST['trangThai'];
+                    $soLuong=$_POST['soLuong'];
                     $hinh=$_FILES['img']['name'];
                     $target_dir = "../../../public/upload/";
                     $target_file = $target_dir . basename($_FILES["img"]["name"]);
@@ -121,7 +125,7 @@
                       }
                     // $tmp_img = $_FILES['img']['tmp_name'];
                     // move_uploaded_file($tmp_img,"./img/".$img);
-                    inset_sp($ten_sanpham,$mauSac,$dungLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm);
+                    inset_sp($ten_sanpham,$mauSac,$dungLuong,$soLuong,$hinh,$luotXem,$ngay_nhap,$moTa,$id_dm,$trangThai);
                     $thongBao = "them thanh cong";
                 }
             include "sanpham/add.php";
